@@ -2,7 +2,24 @@
 //  move on to Binding Arguments if it's taking more than a few mintues
 //  you can always come back to it later
 
-const obj = {};
+ const obj = {
+    state: {
+ current : []
+    },
+ method : function(arg) {
+         this.state.push(arg);
+    }
+
+/*adder: function(arg){
+    
+    this.state.current += arg;
+     },
+sub: function(arg){
+    
+        this.state.current -= arg;
+}*/
+ }
+ obj.method('current', '0');
 
 // don't change the code below this line
 const boundMethod = obj.method.bind(obj);
